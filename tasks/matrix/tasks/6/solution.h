@@ -1,14 +1,14 @@
-#pragma once
-
-#include <stdint.h>
 #include <stdio.h>
+#include <math.h>
+#include <stdint.h>
+#include <stdlib.h>
 
 typedef int32_t** Matrix;
 
-int Task() {
-    // write your solution here
+int Task(){
     FILE* file;
-    file = fopen("file.txt", "r");
+    const char* path = "../tasks/matrix/tasks/6/matrix.txt"
+    file = fopen(path, "r");
     int count = 1;
     int32_t* massive = (int32_t*)malloc(sizeof(int32_t) * 64);
     int k = 0;
@@ -16,7 +16,7 @@ int Task() {
         count = fscanf(file, "%d", &massive[k]);
         ++k;
     }
-    int len;
+    int len = 0;
     len = (int)sqrt(k);
     Matrix matrix = (Matrix)malloc(sizeof(int32_t*) * len);
     for (int i = 0; i < len; ++i) {
@@ -40,7 +40,7 @@ int Task() {
     for (int i = 0; i < len; ++i) {
         numbers[i] = 0;
     }
-    int last;
+    int last = 0;
     for (int j = 0; j < len; ++j) {
         for (int i = 0; i < len; ++i) {
             if (matrix[i][j] < Min) {
@@ -78,5 +78,4 @@ int Task() {
         free(matrix[i]);
     }
     free(matrix);
-    return 0;
 }
