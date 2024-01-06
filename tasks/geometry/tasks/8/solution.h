@@ -40,7 +40,7 @@ typedef struct {
 
 int CheckZone(Point p) {
     // Write a code here that checks whether a point belongs to a given area
-    if (5 <= p.x && 15 >= p.x && 5 <= p.y && 15>= p.y) {
+    if (5 <= p.x && 15 >= p.x && 5 <= p.y && 15 >= p.y) {
         return 1;
     } 
     return 0;
@@ -67,7 +67,7 @@ int Task() {
             break;
         }
     }
-    if (! CheckZone(p)) {
+    if (!CheckZone(p)) {
         printf("Точка не попадает в указанную область\n");
     }
     return 0;
