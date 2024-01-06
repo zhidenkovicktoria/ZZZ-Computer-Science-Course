@@ -15,7 +15,7 @@ int Task() {
     // write your solution here
     int64_t number;
     int64_t count = 1;
-    scanf("%d", &number);
+    scanf("%ld", &number);
     int64_t number_save = number;
     while (number / 10 != 0) {
         number = number / 10;
@@ -39,6 +39,6 @@ int Task() {
     if (number) {
         result = result * 10 + number;
     }
-    printf("%d\n", result);
+    printf("%ld\n", result);
     return 0;
 }
