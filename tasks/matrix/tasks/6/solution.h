@@ -7,8 +7,7 @@ typedef int32_t** Matrix;
 
 int Task() {
     FILE* file;
-    const char* path = "../tasks/matrix/tasks/6/matrix.txt"
-    file = fopen(path, "r");
+    const char* path = "../tasks/matrix/tasks/6/matrix.txt" file = fopen(path, "r");
     int count = 1;
     int32_t* massive = (int32_t*)malloc(sizeof(int32_t) * 64);
     int k = 0;
