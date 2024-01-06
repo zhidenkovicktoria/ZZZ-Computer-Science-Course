@@ -13,7 +13,7 @@ int64_t power(int64_t num1, int64_t num2) {
 
 int Task() {
     // write your solution here
-    int64_t number;
+    int64_t number = 0;
     int64_t count = 1;
     scanf("%ld", &number);
     int64_t number_save = number;
@@ -22,8 +22,8 @@ int Task() {
         count++;
     }
     number = number_save;
-    int64_t number_1;
-    int64_t number_2;
+    int64_t number_1 = 0;
+    int64_t number_2 = 0;
     int64_t result = 0;
     while (count >= 2) {
         number_1 = number / power(10, count - 1);
