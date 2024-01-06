@@ -67,7 +67,7 @@ int Task() {
     }
     printf("\n");
     for (int i = 0; i < len; ++i) {
-        for(int j = 0; j < len; ++j) {
+        for (int j = 0; j < len; ++j) {
             printf("%d ", matrix[i][j]);
         }
         printf("\n");
