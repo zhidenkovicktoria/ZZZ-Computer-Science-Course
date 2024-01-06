@@ -32,7 +32,7 @@ int Task() {
         number = number % (int64_t)power(10, count - 2);
         count -= 2;
         result = result * 100 + 10 * number_1 + number_2;
-        if (number_1 + number_2 < 10){
+        if (number_1 + number_2 < 10) {
             result = result * 10 + number_1 + number_2;
         }
     }
