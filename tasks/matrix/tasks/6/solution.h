@@ -5,7 +5,7 @@
 
 typedef int32_t** Matrix;
 
-int Task(){
+int Task() {
     FILE* file;
     const char* path = "../tasks/matrix/tasks/6/matrix.txt"
     file = fopen(path, "r");
