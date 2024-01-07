@@ -22,8 +22,8 @@ int Task() {
     int answer = 0;
     int flag = 0;
     Bitset set = 0;
-    unsigned char letter_1 = 0;
-    unsigned char letter_2 = 0;
+    char letter_1 = 0;
+    char letter_2 = 0;
     letter_1 = (char)getchar();
     letter_2 = letter_1;
     while (true) {
