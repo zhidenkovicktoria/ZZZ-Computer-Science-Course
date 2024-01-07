@@ -29,7 +29,7 @@ int Task() {
         }
         printf("\n");
     }
-    int32_t* mas = (int32_t*)malloc(sizeof(int32_t) * m);
+    int32_t* mas = (int32_t*)malloc(sizeof(int32_t) * m * n);
     int k = 0;
     for (int j = 3; j >= 0; --j) {
         mas[k] = matrix[0][j];
