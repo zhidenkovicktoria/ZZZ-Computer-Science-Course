@@ -49,7 +49,7 @@ int Task() {
             set = 0;
         }
         letter_2 = letter_1;
-        if (letter_1 == '\n') {
+        if (letter_1 == EOF) {
             break;
         }
         letter_1 = getchar();
