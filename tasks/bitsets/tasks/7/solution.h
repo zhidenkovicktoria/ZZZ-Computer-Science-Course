@@ -7,7 +7,7 @@ typedef uint32_t Bitset;
 
 Bitset Consonants() {
     Bitset Consonants = 0;
-    for (unsigned char i = 'b'; i <= 'z'; ++i){
+    for (unsigned char i = 'b'; i <= 'z'; ++i) {
         if (i != 'o' && i != 'e' && i!= 'i' && i != 'y' && i != 'u') {
             Consonants = Consonants | (1u << (i - 'a'));
         }
@@ -36,11 +36,11 @@ int Task() {
                 flag = 1;
             }
         } else if (flag) {
-            if ('a' <= letter_2 && letter_2 <= 'z'){
-                    Set = Set | (1u << (letter_2 - 'a'));
-                } else {
-                    Set = Set | (1u << (letter_2 - 'A'));
-                }
+            if ('a' <= letter_2 && letter_2 <= 'z') {
+                Set = Set | (1u << (letter_2 - 'a'));
+            } else {
+                Set = Set | (1u << (letter_2 - 'A'));
+            }
             flag = 0;
             if ((Set & Consonants_Set) == 0) {
                 answer = 1;
