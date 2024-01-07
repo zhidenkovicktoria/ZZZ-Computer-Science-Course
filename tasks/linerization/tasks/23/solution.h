@@ -9,7 +9,7 @@ typedef int32_t** Matrix;
 int Task() {
     // write your solution here
     FILE* matr = nullptr;
-    const char* path = "../tasks/linerezation/tasks/23/matr.txt";
+    const char* path = "../tasks/linerization/tasks/23/matr.txt";
     matr = fopen(path, "r");
     const int n = 4;
     const int m = 4;
