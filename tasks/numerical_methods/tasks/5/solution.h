@@ -5,8 +5,6 @@
 #include <stdint.h>
 #include <stdio.h>
 
-int64_t K = 1000;
-
 double Func1(double x) {
     return (sqrt(1 - x) - tan(x));
 }
