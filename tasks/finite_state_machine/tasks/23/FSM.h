@@ -17,7 +17,8 @@ typedef enum {
 int Task() {
     // write your solution here
     State state = START;
-    char* path[] = "../tasks/finite_state_machine/tasks/23/file.txt";
+    FILE* file = nullptr;
+    const char* path = "../tasks/finite_state_machine/tasks/23/file.txt";
     int64_t lim = 65535;
     int64_t number = 0;
     int64_t count = 0;
@@ -27,7 +28,7 @@ int Task() {
                 state = OPEN_FILE;
                 break;
             case OPEN_FILE:
-                FILE* file = fopen(path, "r");
+                file = fopen(path, "r");
                 state = READ_FILE;
                 break;
             case READ_FILE:
@@ -51,6 +52,8 @@ int Task() {
             case CLOSE_FILE:
                 fclose(file);
                 state = END;
+                break;
+            case END:
                 break;
         }
     }
