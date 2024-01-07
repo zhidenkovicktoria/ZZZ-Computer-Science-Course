@@ -30,13 +30,13 @@ double Iter(double a, double b, double (*func)(double)) {
     double value0 = (a + b) / 2;
     double value1 = NAN;
     double value2 = NAN;
-    value1 = Func2(value0);
-    value2 = Func2(value1);
+    value1 = func(value0);
+    value2 = func(value1);
     double stop = fabs((value2 - value1) / (1 - ((value2 - value1) / (value1 - value0))));
     while (stop > DBL_EPSILON) {
         value0 = value1;
         value1 = value2;
-        value2 = Func2(value1);
+        value2 = func(value1);
         stop = fabs((value2 - value1) / (1 - ((value2 - value1) / (value1 - value0))));
     }
     return value2;
