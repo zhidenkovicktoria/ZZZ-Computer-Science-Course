@@ -6,8 +6,8 @@
 typedef int32_t** Matrix;
 
 int Task() {
-    FILE* file;
-    const char* path = "../tasks/matrix/tasks/6/matrix.txt" file = fopen(path, "r");
+    FILE* file = nullptr;
+    const char* path = "../tasks/matrix/tasks/6/matrix.txt"; file = fopen(path, "r");
     int count = 1;
     int32_t* massive = (int32_t*)malloc(sizeof(int32_t) * 64);
     int k = 0;
@@ -34,7 +34,7 @@ int Task() {
         }
         printf("\n");
     }
-    int32_t Min = matrix[0][0];
+    int32_t min = matrix[0][0];
     int32_t numbers[len];
     for (int i = 0; i < len; ++i) {
         numbers[i] = 0;
@@ -42,14 +42,14 @@ int Task() {
     int last = 0;
     for (int j = 0; j < len; ++j) {
         for (int i = 0; i < len; ++i) {
-            if (matrix[i][j] < Min) {
-                Min = matrix[i][j];
+            if (matrix[i][j] < min) {
+                min = matrix[i][j];
                 for (int h = 0; h < j; ++h) {
                     numbers[h] = 0;
                 }
                 numbers[j] = 1;
                 last = j;
-            } else if (matrix[i][j] == Min) {
+            } else if (matrix[i][j] == min) {
                 numbers[j] = 1;
                 last = j;
             }
