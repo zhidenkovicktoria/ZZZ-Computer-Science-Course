@@ -14,7 +14,7 @@ double Func2(double x) {
 }
 
 double Dich(double a, double b, double (*func)(double)) {
-    double mdl;
+    double mdl = NAN;
     while ((b - a) > DBL_EPSILON) {
         mdl = (a + b) / 2;
         if ((func(a) < 0 && func(mdl) > 0) || (func(a) > 0 && func(mdl) < 0)) {
