@@ -62,7 +62,7 @@ int Task() {
     printf("\n");
     fclose(matr);
     free(mas);
-    for(int i = 0; i < n; ++i){
+    for (int i = 0; i < n; ++i) {
         free(matrix[i]);
     }
     free(matrix);
