@@ -17,7 +17,7 @@ Bitset Consonants() {
 
 int Task() {
     // write your solution here
-    Bitset consonants_Set = Consonants();
+    Bitset consonants_set = Consonants();
     int answer = 0;
     int flag = 0;
     Bitset set = 0;
@@ -42,7 +42,7 @@ int Task() {
                 set = set | (1u << (letter_2 - 'A'));
             }
             flag = 0;
-            if ((set & consonants_Set) == 0) {
+            if ((set & consonants_set) == 0) {
                 answer = 1;
             }
             set = 0;
