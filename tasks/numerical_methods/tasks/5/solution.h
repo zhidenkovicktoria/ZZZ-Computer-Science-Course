@@ -1,21 +1,21 @@
 #pragma once
 
 #include <float.h>
+#include <math.h>
 #include <stdint.h>
 #include <stdio.h>
-#include <math.h>
 
 int64_t K = 1000;
 
-double Func1 (double x) {
+double Func1(double x) {
     return (sqrt(1 - x) - tan(x));
 }
 
-double Func2 (double x) {
+double Func2(double x) {
     return ( -cos(pow(x, 0.52) + 2));
 }
 
-double Dich (double a, double b, double (*func)(double)) {
+double Dich(double a, double b, double (*func)(double)) {
     double mdl;
     while ((b - a) > DBL_EPSILON) {
         mdl = (a + b) / 2;
@@ -28,7 +28,7 @@ double Dich (double a, double b, double (*func)(double)) {
     return ((b + a) / 2);
 }
 
-double Iter (double a, double b, double (*func)(double)) {
+double Iter(double a, double b, double (*func)(double)) {
     double value0 = (a + b) / 2;
     double value1;
     double value2;
@@ -46,8 +46,7 @@ double Iter (double a, double b, double (*func)(double)) {
 
 int Task() {
     // write your solution here
-    double result = Dich(0, 1, Func1);
-    printf("%.4f\n", result);
-    printf("%.4f\n", Iter(0.5, 1, Func2))
+    printf("Корень 1ого уравнения, полученный методом дихотомии: %.4f\n", Dich(0, 1, Func1));
+    printf("Корень 2ого уравнения, полученный методом итераций: %.4f\n", Iter(0.5, 1, Func2));
     return 0;
 }
