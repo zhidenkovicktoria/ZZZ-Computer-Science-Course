@@ -8,7 +8,7 @@ typedef uint32_t Bitset;
 Bitset Consonants() {
     Bitset Consonants = 0;
     for (unsigned char i = 'b'; i <= 'z'; ++i) {
-        if (i != 'o' && i != 'e' && i!= 'i' && i != 'y' && i != 'u') {
+        if (i != 'o' && i != 'e' && i != 'i' && i != 'y' && i != 'u') {
             Consonants = Consonants | (1u << (i - 'a'));
         }
     }
