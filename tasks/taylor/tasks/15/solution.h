@@ -23,9 +23,9 @@ long double Func(long double x) {
 int Task() {
     // write your solution here
     int n = 2;
-    double element = 1;
-    double sum = 1;
-    double difference = 1;
+    long double element = 1;
+    long double sum = 1;
+    long double difference = 1;
     int count_iterations = 1;
     printf(" ----------------------------------------------------------------\n");
     printf("  x   |     Taylor series      |      Function          | Iters |\n");
@@ -37,13 +37,13 @@ int Task() {
         count_iterations = 1;
         n = 2;
         while (EPS * K <= difference && count_iterations < MAX_ITERATION) {
-            element = -(element * x * x / (n * (n - 1)));
+            element = -1 * (element * x * x / (n * (n - 1)));
             sum += element;
             n += 2;
             difference = fabs(Func(x) - sum);
             count_iterations++;
         }
-        printf("%6.2Lf|%24.20f|%24.20Lf|%4d\n", x, sum, Func(x), count_iterations);
+        printf("%6.2Lf|%24.20Lf|%24.20Lf|%4d\n", x, sum, Func(x), count_iterations);
     }
     printf(" ----------------------------------------------------------------\n");
     return 0;
