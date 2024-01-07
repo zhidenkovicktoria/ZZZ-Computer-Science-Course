@@ -24,7 +24,7 @@ int Task() {
     Bitset set = 0;
     unsigned char letter_1 = 0;
     unsigned char letter_2 = 0;
-    letter_1 = getchar();
+    letter_1 = (char)getchar();
     letter_2 = letter_1;
     while (true) {
         if (('a' <= letter_1 && letter_1 <= 'z') || ('A' <= letter_1 && letter_1 <= 'Z')) {
@@ -52,7 +52,7 @@ int Task() {
         if (letter_1 == EOF) {
             break;
         }
-        letter_1 = getchar();
+        letter_1 = (char)getchar();
     }
     if (answer) {
         printf("Есть слова, начинающиеся и заканчивающиеся гласными.\n");
