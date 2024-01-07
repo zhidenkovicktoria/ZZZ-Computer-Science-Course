@@ -12,7 +12,7 @@ double Func1(double x) {
 }
 
 double Func2(double x) {
-    return ( -cos(pow(x, 0.52) + 2));
+    return (-cos(pow(x, 0.52) + 2));
 }
 
 double Dich(double a, double b, double (*func)(double)) {
