@@ -1,3 +1,5 @@
+#pragma once
+
 #include <math.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -36,7 +38,7 @@ int Task() {
         printf("\n");
     }
     int32_t min = matrix[0][0];
-    int32_t numbers[len];
+    int32_t* numbers = (int32_t*)malloc(sizeof(int32_t) * len);
     for (int i = 0; i < len; ++i) {
         numbers[i] = 0;
     }
