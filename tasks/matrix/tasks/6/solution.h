@@ -80,5 +80,6 @@ int Task() {
         free(matrix[i]);
     }
     free(matrix);
+    free(numbers);
     return 0;
 }
