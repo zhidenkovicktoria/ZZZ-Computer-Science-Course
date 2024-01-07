@@ -28,8 +28,8 @@ double Dich(double a, double b, double (*func)(double)) {
 
 double Iter(double a, double b, double (*func)(double)) {
     double value0 = (a + b) / 2;
-    double value1;
-    double value2;
+    double value1 = NAN;
+    double value2 = NAN;
     value1 = Func2(value0);
     value2 = Func2(value1);
     double stop = fabs((value2 - value1) / (1 - ((value2 - value1) / (value1 - value0))));
