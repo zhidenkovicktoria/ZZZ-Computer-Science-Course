@@ -1,7 +1,7 @@
 #pragma once
 
-#include <stdio.h>
 #include <stdint.h>
+#include <stdio.h>
 
 typedef enum {
     START,
@@ -22,7 +22,7 @@ int Task() {
     int64_t number = 0;
     int64_t count = 0;
     while (state != END) {
-        switch(state) {
+        switch (state) {
             case START:
                 state = OPEN_FILE;
                 break;
@@ -31,7 +31,7 @@ int Task() {
                 state = READ_FILE;
                 break;
             case READ_FILE:
-                if (feof(file) != 1){
+                if (feof(file) != 1) {
                     fscanf(file, "%ld", &number);
                     state = CHECK;
                     break;
