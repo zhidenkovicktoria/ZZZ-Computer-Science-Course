@@ -18,7 +18,7 @@ int Task() {
     // write your solution here
     State state = START;
     char* path = "../tasks/finite_state_machine/tasks/23/file.txt";
-    int64_t LIM = 65535;
+    int64_t lim = 65535;
     int64_t number = 0;
     int64_t count = 0;
     while (state != END) {
@@ -39,7 +39,7 @@ int Task() {
                 state = PRINT;
                 break;
             case CHECK:
-                if (number > 0 && number < LIM) {
+                if (number > 0 && number < lim) {
                     count++;
                 }
                 state = READ_FILE;
